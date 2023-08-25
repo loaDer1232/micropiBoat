@@ -16,10 +16,9 @@ def servo_Angle(angle):
         angle = 180
     mainServo.goto(round(servo_Map(angle,0,180,0,1024))) # Convert range value to angle value
     jibServo.goto(round(servo_Map(angle,0,180,0,1024)))
-    
 
-if __name__ == '__main__':
-    while True:
+def POST(x):   
+    while x:
         print("Turn left ...")
         for i in range(0,180,10):
             servo_Angle(i)
@@ -28,3 +27,13 @@ if __name__ == '__main__':
         for i in range(180,0,-10):
             servo_Angle(i)
             utime.sleep(0.05)
+        x = False
+        main()
+
+def main():
+    if angel():
+        
+if __name__ == '__main__':
+    x = True
+    POST(x)
+
