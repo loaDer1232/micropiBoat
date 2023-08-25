@@ -10,4 +10,4 @@ takes an input and coverts into a angel vaules alowing us to easily use them to 
 
 ## Hardware:
 ### Pi PICO W:
-    ![PinOut for PicoPi W](https://www.raspberrypi.com/documentation/microcontrollers/images/pico-pinout.svg)
+![PinOut for PicoPi W](https://www.raspberrypi.com/documentation/microcontrollers/images/pico-pinout.svg)
