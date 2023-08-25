@@ -16,6 +16,6 @@ I decided to use the raspberry pi pico w as it was a microcomtroler that was wit
 
 ### Other Hardware:
 For the servos I chose to use the SG-5010 which has caused several problems for example I didnt realise that the minamum voltage was 4.8V when the deafualt power output on the pi pico was 3V so it had to make a bodge soultion
-![pinout for SG-5010](https://protosupplies.com/wp-content/uploads/2018/03/Servo-Connections.jpg) 
+![pinout for SG-5010](https://protosupplies.com/wp-content/uploads/2018/03/Servo-Connections.jpg)         
 <sub>pinout for the SG-5010</sub>
 interstingly the wires I used where taken from cat-6e ethernet cables because it was cheaper than buyimg soldcore copper cables
