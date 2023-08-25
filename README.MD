@@ -7,3 +7,7 @@ this class provides an easy way to interface the pins on the pico and coverts th
 
 ### angelDetector.py:
 takes an input and coverts into a angel vaules alowing us to easily use them to set points of sail  
+
+## Hardware:
+### Pi PICO W:
+    ![PinOut for PicoPi W](https://www.raspberrypi.com/documentation/microcontrollers/images/pico-pinout.svg)
