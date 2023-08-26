@@ -19,3 +19,22 @@ For the servos I chose to use the SG-5010 which has caused several problems for 
 ![pinout for SG-5010](https://protosupplies.com/wp-content/uploads/2018/03/Servo-Connections.jpg)         
 <sub>pinout for the SG-5010</sub><br>
 interstingly the wires I used where taken from cat-6e ethernet cables because it was cheaper than buyimg soldcore copper cables
+
+## style guide: 
+1. varibles should be in camelCase and have type hints
+2. functions are camelCase with _ between each word and have type hints
+3. classes have capatilas ate the start and for each word and have descriptions and Attributes
+4. identation should be done with tabs     
+
+Example
+```
+def example_Function(foo: int, bar: str)-> str:
+    fooBar: str = str(foo) + bar
+    return fooBar
+
+class ExampleClass:
+    ''' this is an example
+    Attributes:
+    this: this is fake
+    '''
+```
