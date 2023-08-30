@@ -1,10 +1,12 @@
 from servo import Servo
+from angelDeyector import AngelDetecor
 from machine import Pin
 from customError import *
 import utime
 
 mainServo = Servo(20)
 jibServo = Servo(21)
+detector = AngelDetecor(26, 20, 10.2)
 led = Pin("LED", Pin.OUT)
 
 def servo_Map(x: int, in_min: int, in_max: int, out_min: int, out_max: int) -> int:
@@ -31,7 +33,7 @@ def POST():   #POST tests if the servos are broken
         servo_Angle_Main(i)
         servo_Angle_Jib(i)
         utime.sleep(0.05)
-    main()
+    main(detector.angelFind())
 
 def points_Sail_Main(windAngle: float) -> int:
     downWind: int = 0
@@ -70,6 +72,7 @@ def main(windAngle: float):
         try:
             servo_Angle_Main(points_Sail_Main(windAngle))
             servo_Angle_Jib(points_Sail_Jib(windAngle))
+            windAngle = detector.angelFind()
         except:
             print("start failed")
             POST()

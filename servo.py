@@ -1,5 +1,5 @@
 from machine import Pin, PWM
- 
+from customError import InvaildRangeValue
  
 class Servo:
     """ A simple class for controlling a 9g servo with the Raspberry Pi Pico.
@@ -34,6 +34,10 @@ class Servo:
         self.__pwm.freq(50)
         self.minVal = minVal
         self.maxVal = maxVal
+        if(minVal < 2500) or (minVal > 7500):
+            raise InvaildRangeValue(2500, 7500)
+        if(maxVal < 2500) or (maxVal > 7500):
+            raise InvaildRangeValue(2500, 7500)
  
     def deinit(self):
         """ Deinitializes the underlying PWM object.
