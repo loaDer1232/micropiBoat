@@ -1,12 +1,17 @@
 from servo import Servo
 from angelDeyector import AngelDetecor
 from machine import Pin
+from pathFinder import PathFinder
 from customError import *
 import utime
+
+startPoint: tuple[float, float] = (4,5)
+endPoint: tuple[float, float] =  (6,3)
 
 mainServo = Servo(20)
 jibServo = Servo(21)
 detector = AngelDetecor(31)
+path = PathFinder(startPoint, endPoint)
 led = Pin("LED", Pin.OUT)
 
 
@@ -79,6 +84,7 @@ def main(windAngle: float):
             servo_Angle_Main(points_Sail_Main(windAngle))
             servo_Angle_Jib(points_Sail_Jib(windAngle))
             windAngle = detector.angelFind()
+            derection = path.findPath(loaction)
         except:
             led.low()
             print("start failed")
