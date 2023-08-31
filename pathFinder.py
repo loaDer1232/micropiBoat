@@ -1,4 +1,5 @@
 from customError import *
+from math import acos, sqrt, pi
 
 
 class PathFinder:
@@ -23,6 +24,7 @@ class PathFinder:
         self.startLocation = startCoords
         self.endLocation = endingCoords
         self.vector: tuple[float, float]
+        self.angel: float
 
     def findVector(self)-> tuple[float, float]:
         """ Finds the horzontal and vertacal vectors
@@ -37,7 +39,11 @@ class PathFinder:
         self.vector = (xVector, yVector)
         return self.vector
 
-    def findAngel(self):
+    def findAngel(self)-> float:
         """ Finds the angel it has to travel
         """
-         
+        adjacent: float = self.vector[0]
+        hypotuse: float = sqrt(self.vector[0]**2 + self.vector[1]**2)
+        angel = acos(adjacent / hypotuse)
+        self.angel = angel * (180/pi)
+        return self.angel 
