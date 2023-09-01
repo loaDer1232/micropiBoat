@@ -39,6 +39,14 @@ this class provides an easy way to interface the pins on the pico and coverts th
 
 takes a voltage from a potentiometer as input and coverts into a angel vaules alowing us to easily use them to set points of sail
 
+### pathFinder.py:
+
+takes the start and ending coorids and uses this to find the horozotal and vertacal vectors as well as the angle need for travel 
+it finds the vectors using:  
+$x_1 - x_2$ and $y_1 - y_2$ 
+and the angel using:   
+$θ = cos^{-1}({adjcent \over hypotonys})$ where adjacent =  and oppo
+
 ## Hardware:
 
 ### Pi PICO W:
