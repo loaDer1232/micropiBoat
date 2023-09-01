@@ -68,6 +68,30 @@ interstingly the wires I used where taken from cat-6e ethernet cables because it
 ![wire diagram for pico boat](/Media/Capture.PNG)  
 <sub>wire diagram for pico boat</sub>
 
+## project managment:
+I decided to use a waterfall project management tool as this project mainly relied on parts that required other parts to be finished first and would also for me to meet certain deadlines i set up this waterfall using a spreadsheet this tool was also appropriate as this was a solo project so i didn't need to manage others only myself
+![water fall chart](/Media/Capture1.PNG)
+As you can see in my project management and in the screenshots I split my project into several functions and classes E.g. there is a class that interfaces with the servos and another that interfaces with the potentiometer and i have split the main function into several subroutines. This allowed me to more easily manage and test the individual components 
+![deconsturcted functions](/Media/Capture2.PNG)
+I have obveslay chosen to use git and github for version control here is a screen shot of my git tree I found:
+![git tree](/Media/) 
+
+## Trialling components:
+### Componet testing rules:
+1. all values passed must be of the correct type E.g. Int,  str,  etc.
+2. all values returened must be of correct type
+3. all values passed must be in acepatble bounds
+4. all values returned must be in acepatble bounds 
+5. if any of the above rules are breached an error be returned and the program be stoped 
+### Componet testing system:
+1. 
+
+## Testing outcome
+
+## Relevant Implications
+
+## Evaluate
+
 ## style guide:
 
 1. varibles should be in camelCase and have type hints
