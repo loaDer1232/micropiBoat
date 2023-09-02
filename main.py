@@ -6,18 +6,6 @@ from settings import Settings
 from customError import *
 import utime
 
-setRead = Settings("settings.json")
-settings: dict = setRead.readSettings()
-startPoint: tuple[float, float] = settings["startPoint"]
-endPoint: tuple[float, float] = settings["endPoint"]
-
-mainServo = Servo(settings["mainServo"])
-jibServo = Servo(settings["jibServo"])
-rudderServo = Servo(settings["rudderServo"])
-detector = AngelDetecor(settings["detector"])
-path = PathFinder(startPoint, endPoint)
-led = Pin("LED", Pin.OUT)
-
 
 def servo_Map(x: int, in_min: int, in_max: int, out_min: int, out_max: int) -> int:
     return int((x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min)
@@ -52,7 +40,7 @@ def POST():  # POST tests if the servos are broken
         servo_Angle_Main(i)
         servo_Angle_Jib(i)
         utime.sleep(0.05)
-    main(detector.angelFind())
+
 
 
 def points_Sail_Main(windAngle: float) -> int:
@@ -88,6 +76,7 @@ def points_Sail_Jib(windAngle: float) -> int:
 
 
 def main(windAngle: float):
+    POST()
     led.high()
     while True:
         try:
@@ -100,5 +89,17 @@ def main(windAngle: float):
             print("start failed")
             POST()
 
+if __name__ == "__main__":
+    setRead = Settings("settings.json")
+    settings: dict = setRead.readSettings()
+    startPoint: tuple[float, float] = settings["startPoint"]
+    endPoint: tuple[float, float] = settings["endPoint"]
 
-POST()
+    mainServo = Servo(settings["mainServo"])
+    jibServo = Servo(settings["jibServo"])
+    rudderServo = Servo(settings["rudderServo"])
+    detector = AngelDetecor(settings["detector"])
+    path = PathFinder(startPoint, endPoint)
+    led = Pin("LED", Pin.OUT)
+    
+    main(detector.angelFind())
