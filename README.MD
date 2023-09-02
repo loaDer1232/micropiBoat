@@ -41,11 +41,11 @@ takes a voltage from a potentiometer as input and coverts into a angel vaules al
 
 ### pathFinder.py:
 
-takes the start and ending coorids and uses this to find the horozotal and vertacal vectors as well as the angle need for travel 
+takes the start and ending coorids and uses this to find the horozotal and vertacal vectors as well as the angle need for travel
 it finds the vectors using:  
-$x_1 - x_2$ and $y_1 - y_2$ 
-and the angel using:   
-$θ = cos^{-1}({adjcent \over hypotonys})$ where adjacent =  and oppo
+$x_1 - x_2$ and $y_1 - y_2$
+and the angel using:  
+$θ = cos^{-1}({adjcent \over hypotonys})$ where adjacent = and oppo
 
 ## Hardware:
 
@@ -69,26 +69,45 @@ interstingly the wires I used where taken from cat-6e ethernet cables because it
 <sub>wire diagram for pico boat</sub>
 
 ## project managment:
+
 I decided to use a waterfall project management tool as this project mainly relied on parts that required other parts to be finished first and would also for me to meet certain deadlines i set up this waterfall using a spreadsheet this tool was also appropriate as this was a solo project so i didn't need to manage others only myself
 ![water fall chart](/Media/Capture1.PNG)
-As you can see in my project management and in the screenshots I split my project into several functions and classes E.g. there is a class that interfaces with the servos and another that interfaces with the potentiometer and i have split the main function into several subroutines. This allowed me to more easily manage and test the individual components 
+As you can see in my project management and in the screenshots I split my project into several functions and classes E.g. there is a class that interfaces with the servos and another that interfaces with the potentiometer and i have split the main function into several subroutines. This allowed me to more easily manage and test the individual components
 ![deconsturcted functions](/Media/Capture2.PNG)
 I have obveslay chosen to use git and github for version control here is a screen shot of my git tree I found:
-![git tree](/Media/) 
+![git tree](/Media/Capture3.PNG)
 
 ## Trialling components:
+
 ### Componet testing rules:
-1. all values passed must be of the correct type E.g. Int,  str,  etc.
+
+1. all values passed must be of the correct type E.g. Int, str, etc.
 2. all values returened must be of correct type
 3. all values passed must be in acepatble bounds
-4. all values returned must be in acepatble bounds 
-5. if any of the above rules are breached an error be returned and the program be stoped 
+4. all values returned must be in acepatble bounds
+5. if any of the above rules are breached an error be returned and the program be stoped
+
 ### Componet testing system:
-1. 
 
-## Testing outcome
+1. pass all values with in acpteble range and check returened values are correct
+2. pass values just outside acceptlble bounds and make sure errors are returned or otherwise handled
 
-## Relevant Implications
+## Testing outcome:
+
+### write up for protype test 1:
+
+start of test:  
+the boat is placed in to the lake the the pi is powered the boat begains to sail forward after the servo test is finished the boat begains to move sails erraticly boat is then retrived and i find that the potentometer and rudder servo have been damaged  
+end of test  
+test outcome: failed
+
+## Relevant Implications:
+the relevent implactions that I am consdiering are usablity, funcatnality and my end user requierments.
+|implactions|explanation|way I have addressed it|
+|:-:|:-:|:-:|
+|usablity|||
+|functoinality|||
+|end-user requirements|||
 
 ## Evaluate
 
