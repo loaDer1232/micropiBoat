@@ -7,7 +7,7 @@ from customError import *
 import utime
 
 setRead = Settings("settings.json")
-settings: dict[str: int] = setRead.readSettings()
+settings: dict = setRead.readSettings()
 startPoint: tuple[float, float] = settings["startPoint"]
 endPoint: tuple[float, float] = settings["endPoint"]
 

@@ -29,6 +29,10 @@ jibServo = Servo(pin2)
 
 5. the program is ready to run
 
+## Front End:
+I decided to implament a front end to allow users to edit the settings from a GUI this was to allow users to use the boat more easily and with out having to edit the actual code that the boat runs 
+![front end screenshot](/Media/Capture4.PNG)
+
 ## Classes:
 
 ### servo.py:
@@ -39,7 +43,7 @@ this class provides an easy way to interface the pins on the pico and coverts th
 
 takes a voltage from a potentiometer as input and coverts into a angel vaules useing: 
 $\theta  = scale \times x + offset$
-alowing us to easily use them to set points of sail
+alowing us to easily use them to set points of sailz
 
 ### pathFinder.py:
 
@@ -48,6 +52,9 @@ it finds the vectors using:
 $\Delta x = x_2 - x_1$ and $\Delta y = y_2 - y_1$   
 and the angel using:  
 $\theta = cos^{-1}({adjacent \over hypotenuse})$
+
+### settings.py 
+allows users to use a GUI to alter the settings and have it passed to the main file as a JSON
 
 ## Hardware:
 

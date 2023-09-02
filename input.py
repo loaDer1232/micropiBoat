@@ -1,9 +1,9 @@
-from tkinter import *
+from tkinter import Label, Entry, Button, StringVar, Tk
 from settings import Settings
 
 setRead = Settings("settingsFile.json")
 window = Tk()
-settings: dict[str: int] = setRead.readSettings()
+settings: dict = setRead.readSettings()
 
 startPoint = StringVar(value=settings["startPoint"])
 endPoint = StringVar(value=settings["endPoint"])
