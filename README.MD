@@ -9,10 +9,10 @@ instructions:
 
 1. find the voltage of your potentiometer when it is set to zero degrees. this is your offset
 2. find the voltage of the potentiometer at 2 other angles. useing the formula:  
-   $v_2 - v_1 \over   θ_2 -  θ_1$  
+   $v_2 - v_1 \over   \theta_2 -  \theta_1$  
    e.g.  
    ${0.8 - 0.4 \over 200 - 50} = 0.004$  
-    this finds the scale of the potentiometer this works if the potentiometer being used is linaer and is simpley $y = mx+c$ where ${y = θ}$
+    this finds the scale of the potentiometer this works if the potentiometer being used is linaer and is simpley $y = mx+c$ where ${y = \theta}$
 3. take the scale and offset values obtanied in step 2 and use these for the corrspoding values in angelDetector.py as well as the ADC pin you want to use if no scale and offset are provided then deafault values will be used  
    e.g.
 
@@ -37,15 +37,17 @@ this class provides an easy way to interface the pins on the pico and coverts th
 
 ### angelDetector.py:
 
-takes a voltage from a potentiometer as input and coverts into a angel vaules alowing us to easily use them to set points of sail
+takes a voltage from a potentiometer as input and coverts into a angel vaules useing: 
+$\theta  = scale \times x + offset$
+alowing us to easily use them to set points of sail
 
 ### pathFinder.py:
 
 takes the start and ending coorids and uses this to find the horozotal and vertacal vectors as well as the angle need for travel
 it finds the vectors using:  
-$x_1 - x_2$ and $y_1 - y_2$
+$\Delta x = x_2 - x_1$ and $\Delta y = y_2 - y_1$   
 and the angel using:  
-$θ = cos^{-1}({adjcent \over hypotonys})$ where adjacent = and oppo
+$\theta = cos^{-1}({adjacent \over hypotenuse})$
 
 ## Hardware:
 
@@ -102,6 +104,7 @@ end of test
 test outcome: failed
 
 ## Relevant Implications:
+
 the relevent implactions that I am consdiering are usablity, funcatnality and my end user requierments.
 |implactions|explanation|way I have addressed it|
 |:-:|:-:|:-:|

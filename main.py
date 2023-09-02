@@ -2,16 +2,19 @@ from servo import Servo
 from angelDeyector import AngelDetecor
 from machine import Pin
 from pathFinder import PathFinder
+from settings import Settings
 from customError import *
 import utime
 
-startPoint: tuple[float, float] = (4, 5)
-endPoint: tuple[float, float] = (6, 3)
+setRead = Settings("settings.json")
+settings: dict[str: int] = setRead.readSettings()
+startPoint: tuple[float, float] = settings["startPoint"]
+endPoint: tuple[float, float] = settings["endPoint"]
 
-mainServo = Servo(20)
-jibServo = Servo(21)
-rudderServo = Servo(22)
-detector = AngelDetecor(31)
+mainServo = Servo(settings["mainServo"])
+jibServo = Servo(settings["jibServo"])
+rudderServo = Servo(settings["rudderServo"])
+detector = AngelDetecor(settings["detector"])
 path = PathFinder(startPoint, endPoint)
 led = Pin("LED", Pin.OUT)
 
