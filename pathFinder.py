@@ -20,14 +20,14 @@ class PathFinder:
 
             endingLocation (tuple[float, float]): the ending coords of the boat 
         """
-        
+
         self.startLocation = startCoords
         self.endLocation = endingCoords
         self.vector: tuple[float, float]
         self.angel: float
         self.velocity: float
 
-    def findVector(self)-> tuple[float, float]:
+    def findVector(self) -> tuple[float, float]:
         """ Finds the horzontal and vertacal vectors
 
         """
@@ -40,16 +40,16 @@ class PathFinder:
         self.vector = (xVector, yVector)
         return self.vector
 
-    def findAngel(self)-> float:
+    def findAngel(self) -> float:
         """ Finds the angel it has to travel
         """
         adjacent: float = self.vector[0]
         hypotuse: float = sqrt(self.vector[0]**2 + self.vector[1]**2)
         angel = acos(adjacent / hypotuse)
         self.angel = angel * (180/pi)
-        return self.angel 
-    
-    def calcVelocity(self, time: int, distance: int)-> float:
+        return self.angel
+
+    def calcVelocity(self, time: int, distance: int) -> float:
         """ returns the velocity of the boat
         """
         self.velocity = distance / time

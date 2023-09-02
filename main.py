@@ -5,8 +5,8 @@ from pathFinder import PathFinder
 from customError import *
 import utime
 
-startPoint: tuple[float, float] = (4,5)
-endPoint: tuple[float, float] =  (6,3)
+startPoint: tuple[float, float] = (4, 5)
+endPoint: tuple[float, float] = (6, 3)
 
 mainServo = Servo(20)
 jibServo = Servo(21)
@@ -30,6 +30,7 @@ def servo_Angle_Jib(angle: int):
     if (angle < 0) or (angle > 180):
         raise AngleNotInRangeError("jib")
     jibServo.goto(round(servo_Map(angle, 0, 180, 0, 1024)))
+
 
 def servo_Rudder(angle: int):
     if (angle < 0) or (angle > 180):
@@ -95,5 +96,6 @@ def main(windAngle: float):
             led.low()
             print("start failed")
             POST()
+
 
 POST()
