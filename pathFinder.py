@@ -6,9 +6,9 @@ class PathFinder:
     """ A class for finding the current location and the direction the boat needs to travel
     Attributes:
 
-        startingLocation: the starting coords of the boat .
+        startingLocation: the starting coordinates of the boat .
 
-        endingLocation: the ending coords of the boat.
+        endingLocation: the ending coordinates of the boat.
     """
 
     def __init__(self, startCoords: tuple[float, float], endingCoords: tuple[float, float]) -> None:
@@ -16,9 +16,9 @@ class PathFinder:
 
         args:
 
-            startLocations (tuple[float, float]): the starting coords of the boat
+            startLocations (tuple[float, float]): the starting coordinates of the boat
 
-            endingLocation (tuple[float, float]): the ending coords of the boat 
+            endingLocation (tuple[float, float]): the ending coordinates of the boat 
         """
 
         self.startLocation = startCoords
