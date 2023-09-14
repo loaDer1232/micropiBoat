@@ -130,7 +130,7 @@ The boat is placed in to the lake the the pi is powered the boat begains to sail
 end of test  
 test outcome: failed
 
-Start of test: (1/9/23)
+Start of test: (1/9/23)       
 Changes:    
 I ran the potentometer in a waterprofed boax and got the physical input though a rubber gasket to stop it being damged i also peremptively waterproofed the servos to pervent damage and refactored the code    
 test:    
