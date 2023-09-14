@@ -123,12 +123,28 @@ As is evidenced by this document I have chosen to use git and github for version
 
 ## Testing outcome:
 
-### write up for protype test 1:
+### write up for protype 1 test:
 
 Start of test:  
 The boat is placed in to the lake the the pi is powered the boat begains to sail forward after the servo test is finished the boat begins to move sails erraticly boat is then retrived and I find that the potentiometer and rudder servo have been damaged  
 end of test  
 test outcome: failed
+
+Start of test: (1/9/23)
+Changes:
+I ran the potentometer in a waterprofed boax and got the physical input though a rubber gasket to stop it being damged i also peremptively waterproofed the servos to pervent damage and refactored the code 
+test:
+The repaired boat was put into the hutt river and begains to drift down because of the current the the sails seem to be setting them selves correctly but dew to the unfouanatlly testing enviroment
+end of test
+test outcome: failed
+
+Start of test: (16/8/23)
+Changes:
+I increesed the senitivie of voltage to angel calculator to make it sail fater and more direct
+Test:
+the boat is placed into into the wellington harbour and the sails set them selves correctly and it begains to move in the correct direction 
+end of test
+test outcome: successes
 
 ## Relevant Implications:
 
